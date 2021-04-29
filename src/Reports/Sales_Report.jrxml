@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="f3830df3-817a-4142-9b0b-94a7657867e1">
+	<property name="ireport.zoom" value="1.1000000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from invoicetable1]]>
+	</queryString>
+	<field name="InvoiceNo" class="java.lang.Integer"/>
+	<field name="Date" class="java.lang.String"/>
+	<field name="Time" class="java.lang.String"/>
+	<field name="Total" class="java.lang.Double"/>
+	<title>
+		<band height="144" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="2" width="593" height="142" forecolor="#FFFFFF" backcolor="#006699" uuid="deb94255-4267-4e50-ac28-1b768946a82c"/>
+				<staticText>
+					<reportElement x="25" y="20" width="188" height="93" forecolor="#FFFFFF" uuid="79a30115-0df6-462f-b21e-53d532d79f16"/>
+					<textElement>
+						<font fontName="Castellar" size="36" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SALES 
+REPORT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="258" y="55" width="157" height="48" forecolor="#FFFFFF" uuid="ced87fdc-c3c4-41ef-8630-12e5e88b9dfa"/>
+					<textElement textAlignment="Right">
+						<font size="11"/>
+					</textElement>
+					<text><![CDATA[(071) - 721 8800
+newwasanthahotel@gmail.com
+facebook.com/wasanthaHotel]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="447" y="55" width="126" height="48" forecolor="#FFFFFF" uuid="02d777f9-3012-457f-a191-c9248251778b"/>
+					<textElement textAlignment="Right">
+						<font size="11"/>
+					</textElement>
+					<text><![CDATA[267 B240
+Sri Jayawardenepura Kotte
+Sri Lanka]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="93" splitType="Stretch">
+			<textField pattern="h.mm a">
+				<reportElement x="46" y="48" width="100" height="20" uuid="ff43058d-3166-44bb-9d5f-00f5cdb4a117"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="46" y="26" width="100" height="20" uuid="7286c852-a3d0-4d70-b4d9-b166fdbca73b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="26" width="36" height="20" uuid="0f7558db-03bc-4a8f-8e2c-8525231f6e40"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="48" width="36" height="20" uuid="75477946-363f-464d-b746-4d78db9bfefb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="15" y="90" width="565" height="3" forecolor="#006699" uuid="70b096a9-f0e4-4106-9962-da5280dc2557"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="68" y="1" width="100" height="20" uuid="c0c23579-a0f9-4614-a40e-db3a1e524fde"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[InvoiceNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="1" width="100" height="20" uuid="c6eab38b-b993-4fbe-a337-da6f43f538b9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="1" width="100" height="20" uuid="973dc374-fc06-4a1e-a854-fe17bbc20b9f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="1" width="100" height="20" uuid="f57d93c7-2d2d-48a2-b2c6-b55fe463cf72"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="68" y="3" width="100" height="20" uuid="4159ee5a-e749-49d8-8e82-60bac6ed72f3"/>
+				<textFieldExpression><![CDATA[$F{InvoiceNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="3" width="100" height="20" uuid="00139154-9190-461a-8dc8-0f1e02934386"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="3" width="100" height="20" uuid="c5ab6519-a2fc-4e5b-967e-8411d8f2a990"/>
+				<textFieldExpression><![CDATA[$F{Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="3" width="54" height="20" uuid="ad5c5fd0-9fba-485c-8a37-adacbaa6879a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="40" width="593" height="13" backcolor="#006699" uuid="f83775bb-61eb-4be1-b048-2f7cf2a49439"/>
+				<staticText>
+					<reportElement x="283" y="0" width="37" height="13" forecolor="#FFFFFF" uuid="e91b2b41-c57f-4579-8d89-8dab330920f6"/>
+					<text><![CDATA[Page :]]></text>
+				</staticText>
+			</frame>
+			<textField>
+				<reportElement x="297" y="41" width="17" height="13" forecolor="#FFFFFF" uuid="c9c5315e-39de-4307-bfd1-91e8fbbe8950"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="38" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6178c4cb-efd6-4464-9585-225cfec9f24a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[Select * from LoginTable]]>
+	</queryString>
+	<field name="FirstName" class="java.lang.String"/>
+	<field name="LastName" class="java.lang.String"/>
+	<field name="UserType" class="java.lang.String"/>
+	<field name="Username" class="java.lang.String"/>
+	<field name="Password" class="java.lang.String"/>
+	<field name="UserID" class="java.lang.Integer"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="time" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="143" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="595" height="142" forecolor="#FFFFFF" backcolor="#FF6666" uuid="567fd3fc-9a39-4661-94ff-4c2fb4407264"/>
+				<staticText>
+					<reportElement x="25" y="20" width="188" height="93" forecolor="#FFFFFF" uuid="cdbecc02-6846-4da5-9e88-30f606881197"/>
+					<textElement>
+						<font fontName="Castellar" size="36" isBold="true"/>
+					</textElement>
+					<text><![CDATA[User 
+Details]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="258" y="55" width="157" height="48" forecolor="#FFFFFF" uuid="77677797-21f3-4010-a541-d8a8321c4fd9"/>
+					<textElement textAlignment="Right">
+						<font size="11"/>
+					</textElement>
+					<text><![CDATA[(071) - 721 8800
+newwasanthahotel@gmail.com
+facebook.com/wasanthaHotel]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="447" y="55" width="126" height="48" forecolor="#FFFFFF" uuid="2816c618-031d-401b-a03f-a89051be8f91"/>
+					<textElement textAlignment="Right">
+						<font size="11"/>
+					</textElement>
+					<text><![CDATA[267 B240
+Sri Jayawardenepura Kotte
+Sri Lanka]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="104" y="2" width="100" height="20" uuid="4405b1c5-f886-44be-938d-5156cb07d70f"/>
+				<text><![CDATA[FirstName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="2" width="100" height="20" uuid="df78e8e3-f849-4bf0-8d29-7c2b33dda898"/>
+				<text><![CDATA[LastName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="2" width="55" height="20" uuid="f7a38e03-7ab8-4019-9918-a171cb9f716c"/>
+				<text><![CDATA[UserID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="2" width="100" height="20" uuid="e14fb502-0612-4966-8a93-5920642699fc"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="2" width="100" height="20" uuid="24017e0a-53dc-409c-9dfb-4a7d97b27960"/>
+				<text><![CDATA[time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="104" y="6" width="100" height="20" uuid="bcade628-167b-4eaf-ac64-ee32d2533cd8"/>
+				<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="6" width="100" height="20" uuid="74266449-777a-4ac7-97e8-d8bf48223a74"/>
+				<textFieldExpression><![CDATA[$F{LastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="6" width="55" height="20" uuid="2bf3cf8f-cc27-4817-afad-902d9b8e6ea0"/>
+				<textFieldExpression><![CDATA[$F{UserID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="6" width="100" height="20" uuid="eaec76df-6d92-454b-89d6-39a1c44d94e0"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="536" y="6" width="100" height="20" uuid="37668c86-45f4-490e-a0b7-6321de3613a5"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="15" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="595" height="5" backcolor="#FF6666" uuid="911b0472-cf5e-4d5e-a3b8-0e2fb40d0394"/>
+			</rectangle>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="233" y="0" width="80" height="20" uuid="ba96e4be-2b42-448f-9ec6-7f3f61717b2d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="313" y="0" width="40" height="20" uuid="44753b68-52d0-4e05-81f1-093512e61b05"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
